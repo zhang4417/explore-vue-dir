@@ -5,7 +5,7 @@
         <span>输入</span>
         <input type="text" :value="a" @input="(e) => (b = e.target.value)" />
       </label>
-      <button @click="onSave">提交</button>
+      <button @click="onSave" class="submit">提交</button>
     </form>
     <div>{{ a }}</div>
   </div>
@@ -32,7 +32,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 span {
   color: yellow;
