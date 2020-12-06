@@ -3,11 +3,11 @@
     <form>
       <label>
         <span>输入</span>
-        <input type="text" :value="a" @input="(e)=>b=e.target.value" />
+        <input type="text" :value="a" @input="(e) => (b = e.target.value)" />
       </label>
       <button @click="onSave">提交</button>
     </form>
-    <div>{{a}}</div>
+    <div>{{ a }}</div>
   </div>
 </template>
 
@@ -23,16 +23,18 @@ export default {
   computed: {
     a() {
       return this.$store.state.a;
-    }
+    },
   },
   methods: {
     onSave() {
       this.$store.commit("saveA", this.b);
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
+span {
+  color: yellow;
+}
 </style>
